@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".DetailsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsibleToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/Base.TextAppearance.AppCompat"
+            app:expandedTitleGravity="center_vertical"
+            app:expandedTitleMarginStart="170dp"
+            app:expandedTitleMarginTop="220dp"
+            app:expandedTitleTextAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/backdropPoster"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="1.0" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLa"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="20dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/poster"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="216dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.123"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.229"
+                    app:layout_constraintStart_toEndOf="@+id/poster"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3"
+                    app:layout_constraintVertical_bias="0.853" />
+
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="7dp"
+        android:layout_marginStart="7dp"
+        android:text="TextView"
+        android:textSize="12dp"
+        app:layout_anchor="@+id/app_bar"
+        app:layout_anchorGravity="top|center" />
+
+
+</android.support.design.widget.CoordinatorLayout>
